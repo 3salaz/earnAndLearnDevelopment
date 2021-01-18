@@ -1,0 +1,14 @@
+#videoPlayerDemo{
+    margin-top: 20px;
+    height: 500px;
+    video{
+        height: 100%;
+        position: relative;
+        width: 100%;
+    }
+    .overlay{
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0);
+        z-index: 10;
+    }
+}
