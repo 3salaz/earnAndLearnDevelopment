@@ -15,24 +15,29 @@
     <link rel="stylesheet" href="../../style/pages/demos/vidoeLibrary.css" />
     <title>Video Library</title>
   </head>
-  <body>
+  <body">
     <div id="mainContent" class="e-row">
       <header>
         <h1>Learning Library</h1>
       </header>
-      <div id="videoContent" class="e-row">
-        <div id="featuredWrapper" class="e-col-8">
+      <div id="videoContent">
+        <div id="featuredWrapper" class="e-container">
           <video id="featuredVideo" controls autoplay>
             <img src="https://via.placeholder.com/150" />
             Sorry, your browser doesn't support embedded videos.
           </video>
-          <details open>
-            <summary><h3 id="featuredVideoTitle">Open</h3></summary>
+          <details open class="e-row">
+            <summary class="container"><h3 id="featuredVideoTitle"></h3></summary>
             <div id="summaryContent">
               <div class="e-row">
                 <div id="timer"> </div>
                 <ul id="timeStampList">
                 </ul>
+              </div>
+              <div class="e-row white">
+                <div class="e-container">
+                  <p id="videoDescription">This is where the description is</p>
+                </div>
               </div>
               <footer class="e-row">
                 <div class="e-container">
@@ -51,7 +56,7 @@
             </div>
           </details>
         </div>
-        <aside id="videoListWrapper" class="e-col-4 flexy flex-col flex-center">
+        <aside id="videoListWrapper" class="e-container">
           <header class="e-row">
             <h2 class="e-col-12">Browse Our Selections</h2>
           </header>

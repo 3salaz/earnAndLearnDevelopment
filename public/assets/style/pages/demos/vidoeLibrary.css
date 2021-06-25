@@ -187,17 +187,6 @@ ul li {
   width: 100%;
 }
 
-#videoContent {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding: 1em 0;
-}
-
 .active {
   background-color: #dd9747 !important;
   color: white !important;
@@ -259,6 +248,10 @@ ul li {
   }
 }
 
+.white {
+  background-color: white;
+}
+
 @media only screen and (min-width: 60em) {
   /* 960px */
   .e-container {
@@ -285,11 +278,14 @@ ul li {
 }
 
 #featuredVideo {
+  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   border-radius: .5em .5em 0 0;
   aspect-ratio: 16 / 9;
+  width: 100%;
 }
 
-#featuredWrapper video {
+#featuredWrapper {
   width: 100%;
 }
 
@@ -402,6 +398,15 @@ aside h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 1em 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
 }
 
 .videoListContents {
@@ -418,27 +423,18 @@ aside h2 {
 }
 
 details {
+  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   background-color: #22799b;
   border-radius: 0 0 1em 1em;
 }
 
 details summary {
   font-size: 1rem;
-  padding: .5em;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border-radius: 0  0 1em 1em;
 }
 
@@ -448,10 +444,6 @@ details h3 {
   text-align: center;
   padding: .5em;
   margin: 0;
-}
-
-#summaryContent {
-  border: solid #22799b;
 }
 
 #summaryContent .e-row:nth-child(1) {
