@@ -16,65 +16,10 @@
     <title>Video Library</title>
   </head>
   <body">
+    <header>
+      <h1>Learning Library</h1>
+    </header>
     <div id="mainContent" class="e-row">
-      <header>
-        <h1>Learning Library</h1>
-      </header>
-      <div id="videoContent">
-        <div id="featuredWrapper" class="e-container">
-          <video id="featuredVideo" controls autoplay>
-            <img src="https://via.placeholder.com/150" />
-            Sorry, your browser doesn't support embedded videos.
-          </video>
-          <details open class="e-row">
-            <summary class="container"><h3 id="featuredVideoTitle"></h3></summary>
-            <div id="summaryContent">
-              <div class="e-row">
-                <div id="timer"> </div>
-                <ul id="timeStampList">
-                </ul>
-              </div>
-              <div class="e-row white">
-                <div class="e-container">
-                  <p id="videoDescription">This is where the description is</p>
-                </div>
-              </div>
-              <footer class="e-row">
-                <div class="e-container">
-                  <div class="e-col-3">
-                    <i id="infoBtn" class="small material-icons">info_outline</i>
-                  </div>
-                  <div class="e-col-6"></div>
-                  <div class="e-col-3">
-                    <img
-                      class="responsive-img"
-                      src="https://static1.squarespace.com/static/5d2d1af89bbd0800019dd9c5/t/5d2e175e39a4ba00014f1dea/1611072250691/?format=1500w"
-                    />
-                  </div>
-                </div>
-              </footer>
-            </div>
-          </details>
-        </div>
-        <aside id="videoListWrapper" class="e-container">
-          <header class="e-row">
-            <h2 class="e-col-12">Browse Our Selections</h2>
-          </header>
-          <div class="gallery-wrapper e-row">
-            <div id="buttons" class="e-col-12">
-            </div>
-            <ul id="gallery" class="e-col-12">
-              <iframe id="pdf" class="hide"></iframe>
-            </ul>
-          </div>
-          <div id="toggleWrapper" class="e-row">
-            <div id="toggleSection" class="e-container">
-              <button onclick="loadSlide()">Slides</button>
-              <button onclick="loadAllVideos()">Videos</button>
-            </div>
-          </div>
-        </aside>
-      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
