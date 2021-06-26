@@ -133,3 +133,8 @@
 //       }).appendTo($buttons);
 //     });
 //   });
+
+
+function loadV(videoObject){
+  console.log(videoObject.toString);
+}
