@@ -15,11 +15,144 @@
     <link rel="stylesheet" href="../../style/pages/demos/vidoeLibrary.css" />
     <title>Video Library</title>
   </head>
-  <body">
     <header>
       <h1>Learning Library</h1>
     </header>
-    <div id="mainContent" class="e-row">
+    <main class="e-row">
+        <div class="e-col-8">
+          <div id="highlights" class="row">
+            <div class="e-col-12">
+              <h2>🥳 New Video Content Has Arrived</h2>
+            </div>
+            <div class="e-col-6">
+              <div class="btn">
+                <a href="">Contra Costa Manufacturing Week 2020</a>
+                <img src="https://via.placeholder.com/200x100" alt="" width="250" height="125">
+              </div>
+            </div>
+            <div class="e-col-6">
+              <div class="btn">
+                <a href="">Santa Clara County Arts, Media, & Entertainment Career Launch</a>
+                <img src="https://via.placeholder.com/200x100" alt="" width="250" height="125">
+              </div>
+            </div>  
+          </div> 
+        </div>
+        <aside class="e-col-4">
+          <header class="e-container">
+            <h4>Check Out Our Featured Sponsors 🎯</h4>
+            <img src="https://firebasestorage.googleapis.com/v0/b/earn-and-learn-6172e.appspot.com/o/site%2FlandingPage%2Fvideo_call.svg?alt=media&token=720820a9-83e5-4b7d-a85e-26e5a51eddcb" alt="">
+          </header>
+          <section class="slider-wrapper-1">
+            <div class="slider">
+              <div id="logo-slider" class="slide-track">
+                <div class="slide">
+                  <img src="https://via.placeholder.com/150" height="100" width="250" alt="" />
+                </div>
+                <div class="slide">
+                  <img src="https://via.placeholder.com/150" height="100" width="250" alt="" />
+                </div>
+                <div class="slide">
+                  <img src="https://via.placeholder.com/150" height="100" width="250" alt="" />
+                </div>
+              </div>
+            </div>
+          </section>
+        </aside>
+        <video id="featuredVideo" controls autoplay class="hide">
+          <img src="https://via.placeholder.com/150" />
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+      </div>
+    </main>
+    <section id="speakers" class="e-container">
+      <h2>Speakers</h2>
+      <div id="speakerList">
+        <div id="speaker1" class="speaker-card">
+          <h3>Name</h3>
+          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/1516627913810.jfif"
+          alt="Elephant at sunset">
+        </div>
+        <div id="speaker1" class="speaker-card">
+          <h3>Name</h3>
+          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/1516627913810.jfif"
+          alt="Elephant at sunset">
+        </div>
+        <div id="speaker1" class="speaker-card">
+          <h3>Name</h3>
+          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/1516627913810.jfif"
+          alt="Elephant at sunset">
+        </div>
+        <div id="speaker1" class="speaker-card">
+          <h3>Name</h3>
+          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/1516627913810.jfif"
+          alt="Elephant at sunset">
+        </div>
+        <div id="speaker1" class="speaker-card">
+          <h3>Name</h3>
+          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/1516627913810.jfif"
+          alt="Elephant at sunset">
+        </div>
+        <div id="speaker1" class="speaker-card">
+          <h3>Name</h3>
+          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/1516627913810.jfif"
+          alt="Elephant at sunset">
+        </div>
+      </div>
+    </section>
+    
+
+
+    <div id="videoContent" class="hide">
+      <div id="featuredWrapper" class="e-container">
+        <details open class="e-row">
+          <summary class="container"><h3 id="featuredVideoTitle"></h3></summary>
+          <div id="summaryContent">
+            <div class="e-row">
+              <div id="timer"> </div>
+              <ul id="timeStampList">
+              </ul>
+            </div>
+            <div class="e-row white">
+              <div class="e-container">
+                <p id="videoDescription">This is where the description is</p>
+              </div>
+            </div>
+            <footer class="e-row">
+              <div class="e-container">
+                <div class="e-col-3">
+                  <i id="infoBtn" class="small material-icons">info_outline</i>
+                </div>
+                <div class="e-col-6"></div>
+                <div class="e-col-3">
+                  <img
+                    class="responsive-img"
+                    src="https://static1.squarespace.com/static/5d2d1af89bbd0800019dd9c5/t/5d2e175e39a4ba00014f1dea/1611072250691/?format=1500w"
+                  />
+                </div>
+              </div>
+            </footer>
+          </div>
+        </details>
+      </div>
+      <aside id="videoListWrapper" class="e-container">
+        <header class="e-row">
+          <h2 class="e-col-12">Browse Our Selections</h2>
+        </header>
+        <div class="gallery-wrapper e-row">
+          <div id="buttons" class="e-col-12">
+          </div>
+          <ul id="gallery" class="e-col-12">
+            <iframe id="pdf" class="hide"></iframe>
+          </ul>
+        </div>
+        <div id="toggleWrapper" class="e-row">
+          <div id="toggleSection" class="e-container">
+            <button onclick="loadSlide()">Slides</button>
+            <button onclick="loadAllVideos()">Videos</button>
+          </div>
+        </div>
+      </aside>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
