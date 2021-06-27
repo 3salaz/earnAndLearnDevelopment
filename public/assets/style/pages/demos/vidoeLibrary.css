@@ -1,13 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
-main {
+#mainLibrary {
   padding: 1em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #FD940A;
   background-image: radial-gradient(circle, #F9A72B 0%, #FA9026 70%, #FB6C1F 100%);
   -webkit-box-align: center;
@@ -15,25 +15,29 @@ main {
           align-items: center;
 }
 
-main aside {
+#mainLibrary aside {
   border-radius: .5em;
   background-color: white;
 }
 
-main aside h4 {
+#mainLibrary aside h4 {
   text-align: right;
 }
 
-main aside img {
+#mainLibrary aside img {
   width: 100%;
 }
 
-main #highlights {
+#mainLibrary #highlights {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -42,30 +46,74 @@ main #highlights {
           align-items: center;
 }
 
-main #highlights h2 {
+#mainLibrary #highlights h2 {
   text-align: center;
 }
 
-main #highlights .btn {
-  padding: 1em;
+#mainLibrary #highlights .btn {
+  position: relative;
+  text-align: center;
+  color: white;
   margin: .5em;
   -webkit-transition: 300s;
   transition: 300s;
   text-align: center;
-  border: .3em solid;
+  border: 0.3em solid rgba(49, 42, 42, 0);
   cursor: pointer;
 }
 
-main #highlights .btn a {
+#mainLibrary #highlights .btn a {
   text-decoration: none;
 }
 
-main #highlights .btn:hover {
+#mainLibrary #highlights .btn .btn:hover {
   background-color: blue;
+  border: .3em solid white;
+}
+
+#mainLibrary #highlights .overlay-content {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+#mainLibrary #highlights #selection {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#mainLibrary #videoPlayer {
+  padding: 1em;
+}
+
+#mainLibrary #videoPlayer video {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+#mainLibrary aside {
+  padding: 1em;
+}
+
+#speakers {
+  background-color: #dfdf2e;
+  margin: 0;
+}
+
+#speakers header h2 {
+  margin: 0;
+  padding: 1em 0;
 }
 
 #speakerList {
-  background-color: #dfdf2e;
+  max-height: 600px;
+  overflow-y: auto;
 }
 
 .speaker-card {
@@ -76,6 +124,16 @@ main #highlights .btn:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 250px;
+  background-color: white;
+  margin: 1em 0;
+}
+
+.speaker-card img {
+  height: 100%;
 }
 
 .slider-wrapper-1 {
@@ -219,6 +277,18 @@ main #highlights .btn:hover {
 }
 
 @media only screen and (min-width: 641px) {
+  #mainLibrary {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   #featured aside {
     width: 40%;
   }
