@@ -15,67 +15,105 @@
     <link rel="stylesheet" href="../../style/pages/demos/vidoeLibrary.css" />
     <title>Video Library</title>
   </head>
-  <body">
-    <div id="mainContent" class="e-row">
-      <header>
-        <h1>Learning Library</h1>
-      </header>
-      <div id="videoContent">
-        <div id="featuredWrapper" class="e-container">
-          <video id="featuredVideo" controls autoplay>
-            <img src="https://via.placeholder.com/150" />
-            Sorry, your browser doesn't support embedded videos.
-          </video>
-          <details open class="e-row">
-            <summary class="container"><h3 id="featuredVideoTitle"></h3></summary>
-            <div id="summaryContent">
-              <div class="e-row">
-                <div id="timer"> </div>
-                <ul id="timeStampList">
-                </ul>
-              </div>
-              <div class="e-row white">
-                <div class="e-container">
-                  <p id="videoDescription">This is where the description is</p>
-                </div>
-              </div>
-              <footer class="e-row">
-                <div class="e-container">
-                  <div class="e-col-3">
-                    <i id="infoBtn" class="small material-icons">info_outline</i>
-                  </div>
-                  <div class="e-col-6"></div>
-                  <div class="e-col-3">
-                    <img
-                      class="responsive-img"
-                      src="https://static1.squarespace.com/static/5d2d1af89bbd0800019dd9c5/t/5d2e175e39a4ba00014f1dea/1611072250691/?format=1500w"
-                    />
-                  </div>
-                </div>
-              </footer>
+    <header>
+      <h1>Learning Library</h1>
+    </header>
+    <div id="mainLibrary" class="e-row">
+        <main class="e-col-8">
+          <div id="highlights" class="row">
+            <div class="e-col-12">
+              <h2>🥳 New Video Content Has Arrived</h2>
             </div>
-          </details>
-        </div>
-        <aside id="videoListWrapper" class="e-container">
-          <header class="e-row">
-            <h2 class="e-col-12">Browse Our Selections</h2>
+            <div id="selection">
+              <div onclick="loadV(1)" class="btn e-col-6">
+                <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/group1/Thumbnails/manufacuring-week-2020.png" alt="Snow" style="width:100%;">
+                <div class="overlay-content"><h4>Contra Consta Manufacturing Week</h4></div>
+                <!-- <div class="btn" onclick="loadV(1)">
+                  <a href="">Contra Costa Manu
+                    facturing Week 2020</a>
+                  <img src="https://via.placeholder.com/200x100" alt="" width="250" height="125">
+                </div> -->
+              </div>
+              <div onclick="loadV(2)" class="btn e-col-6">
+                <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/group1/Thumbnails/manufacuring-week-2020.png" alt="Snow" style="width:100%;">
+                <div class="overlay-content"><h4>Contra Consta Manufacturing Week</h4></div>
+              </div>  
+            </div>
+
+          </div>
+          <div id="videoPlayer" class="row">
+            <video id="video" controls autoplay class="hide" poster="https://via.placeholder.com/600x325">
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+          </div>
+        </main>
+        <aside class="e-col-4">
+          <header class="e-container">
+            <h4>Check Out Our Featured Sponsors 🎯</h4>
+            <img src="https://firebasestorage.googleapis.com/v0/b/earn-and-learn-6172e.appspot.com/o/site%2FlandingPage%2Fvideo_call.svg?alt=media&token=720820a9-83e5-4b7d-a85e-26e5a51eddcb" alt="">
           </header>
-          <div class="gallery-wrapper e-row">
-            <div id="buttons" class="e-col-12">
+          <section class="slider-wrapper-1">
+            <div class="slider">
+              <div id="logo-slider" class="slide-track">
+                <div class="slide">
+                  <img src="https://via.placeholder.com/150" height="100" width="250" alt="" />
+                </div>
+                <div class="slide">
+                  <img src="https://via.placeholder.com/150" height="100" width="250" alt="" />
+                </div>
+                <div class="slide">
+                  <img src="https://via.placeholder.com/150" height="100" width="250" alt="" />
+                </div>
+              </div>
             </div>
-            <ul id="gallery" class="e-col-12">
-              <iframe id="pdf" class="hide"></iframe>
-            </ul>
-          </div>
-          <div id="toggleWrapper" class="e-row">
-            <div id="toggleSection" class="e-container">
-              <button onclick="loadSlide()">Slides</button>
-              <button onclick="loadAllVideos()">Videos</button>
-            </div>
-          </div>
+          </section>
+        </aside>
+        <aside class="e-col-4 hide">
+          <header class="e-container">
+            <h4>Check Out Our Featured Sponsors 🎯</h4>
+          </header>
         </aside>
       </div>
-    </div>
+    </main>
+    <section id="speakers" class="e-row">
+      <header class="e-container">
+        <h2>Speakers</h2>
+      </header>
+      <div id="speakerList" class="e-container">
+        <div id="speaker1" class="speaker-card">
+          <div class="speaker-content">
+            <h3>Yasmine Campos</h3>
+          </div>
+          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/Yasmine+Campos.jpeg"
+          alt="Elephant at sunset">
+        </div>
+        <div id="speaker1" class="speaker-card">
+          <h3>Nathalie Long</h3>
+          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/Natalie+Long.jpg"
+          alt="Elephant at sunset">
+        </div>
+        <div id="speaker1" class="speaker-card">
+          <h3>Name</h3>
+          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/1516627913810.jfif"
+          alt="Elephant at sunset">
+        </div>
+        <div id="speaker1" class="speaker-card">
+          <h3>Name</h3>
+          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/1516627913810.jfif"
+          alt="Elephant at sunset">
+        </div>
+        <div id="speaker1" class="speaker-card">
+          <h3>Name</h3>
+          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/1516627913810.jfif"
+          alt="Elephant at sunset">
+        </div>
+        <div id="speaker1" class="speaker-card">
+          <h3>Name</h3>
+          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/1516627913810.jfif"
+          alt="Elephant at sunset">
+        </div>
+      </div>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
