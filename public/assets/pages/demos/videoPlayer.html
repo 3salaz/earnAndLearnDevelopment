@@ -15,105 +15,117 @@
     <link rel="stylesheet" href="../../style/pages/demos/vidoeLibrary.css" />
     <title>Video Library</title>
   </head>
-    <header>
-      <h1>Learning Library</h1>
-    </header>
-    <div id="mainLibrary" class="e-row">
-        <main class="e-col-8">
-          <div id="highlights" class="row">
-            <div class="e-col-12">
+  <header class="e-row">
+      <h1 class="e-container">Learning Library</h1>
+  </header>
+  <main id="videoWrapper" class="e-row">
+    <section class="e-col-8">
+      <div id="highlights" class="e-row">
+        <header>
               <h2>🥳 New Video Content Has Arrived</h2>
-            </div>
-            <div id="selection">
-              <div onclick="loadV(1)" class="btn e-col-6">
-                <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/group1/Thumbnails/manufacuring-week-2020.png" alt="Snow" style="width:100%;">
-                <div class="overlay-content"><h4>Contra Consta Manufacturing Week</h4></div>
-                <!-- <div class="btn" onclick="loadV(1)">
-                  <a href="">Contra Costa Manu
-                    facturing Week 2020</a>
-                  <img src="https://via.placeholder.com/200x100" alt="" width="250" height="125">
-                </div> -->
-              </div>
-              <div onclick="loadV(2)" class="btn e-col-6">
-                <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/group1/Thumbnails/manufacuring-week-2020.png" alt="Snow" style="width:100%;">
-                <div class="overlay-content"><h4>Contra Consta Manufacturing Week</h4></div>
-              </div>  
-            </div>
+        </header>
+        <ul id="flyers" class="e-container">
+              <li onclick="loadV(1)" class="flyer e-col-6 overlay">
+                <img src="../../img/flyers/contra-costa-county-manufacturing-week-flyer.png" alt="Snow" style="width:100%;">
+                <div class="overlay-content">Contra Consta Manufacturing Week </div>
+              </li>
+              <li onclick="loadV(2)" class="flyer e-col-6 overlay">
+                <img src="../../img/flyers/santa-clara-county-art-and-media-ent-college-and-career-launch.png" alt="Snow" style="width:100%;">
+                <div class="overlay-content">Santa Clara County Art & Media Ent | College And Career Launch</div>
+              </li>
 
-          </div>
-          <div id="videoPlayer" class="row">
-            <video id="video" controls autoplay class="hide" poster="https://via.placeholder.com/600x325">
-              Sorry, your browser doesn't support embedded videos.
-            </video>
-          </div>
-        </main>
-        <aside class="e-col-4">
-          <header class="e-container">
-            <h4>Check Out Our Featured Sponsors 🎯</h4>
-            <img src="https://firebasestorage.googleapis.com/v0/b/earn-and-learn-6172e.appspot.com/o/site%2FlandingPage%2Fvideo_call.svg?alt=media&token=720820a9-83e5-4b7d-a85e-26e5a51eddcb" alt="">
-          </header>
-          <section class="slider-wrapper-1">
-            <div class="slider">
-              <div id="logo-slider" class="slide-track">
-                <div class="slide">
-                  <img src="https://via.placeholder.com/150" height="100" width="250" alt="" />
-                </div>
-                <div class="slide">
-                  <img src="https://via.placeholder.com/150" height="100" width="250" alt="" />
-                </div>
-                <div class="slide">
-                  <img src="https://via.placeholder.com/150" height="100" width="250" alt="" />
-                </div>
-              </div>
-            </div>
-          </section>
-        </aside>
-        <aside class="e-col-4 hide">
-          <header class="e-container">
-            <h4>Check Out Our Featured Sponsors 🎯</h4>
-          </header>
-        </aside>
+        </ul>
       </div>
-    </main>
-    <section id="speakers" class="e-row">
-      <header class="e-container">
-        <h2>Speakers</h2>
-      </header>
-      <div id="speakerList" class="e-container">
-        <div id="speaker1" class="speaker-card">
-          <div class="speaker-content">
-            <h3>Yasmine Campos</h3>
-          </div>
-          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/Yasmine+Campos.jpeg"
-          alt="Elephant at sunset">
-        </div>
-        <div id="speaker1" class="speaker-card">
-          <h3>Nathalie Long</h3>
-          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/Natalie+Long.jpg"
-          alt="Elephant at sunset">
-        </div>
-        <div id="speaker1" class="speaker-card">
-          <h3>Name</h3>
-          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/1516627913810.jfif"
-          alt="Elephant at sunset">
-        </div>
-        <div id="speaker1" class="speaker-card">
-          <h3>Name</h3>
-          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/1516627913810.jfif"
-          alt="Elephant at sunset">
-        </div>
-        <div id="speaker1" class="speaker-card">
-          <h3>Name</h3>
-          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/1516627913810.jfif"
-          alt="Elephant at sunset">
-        </div>
-        <div id="speaker1" class="speaker-card">
-          <h3>Name</h3>
-          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/1516627913810.jfif"
-          alt="Elephant at sunset">
-        </div>
+      <div id="videoPlayer" class="e-container">
+        <video id="video" controls autoplay class="hide" poster="https://via.placeholder.com/600x325">
+          Sorry, your browser doesn't support embedded videos.
+        </video>
       </div>
     </section>
+    <aside class="e-col-4" id="sponsors">
+      <header>
+        <h4>Check Out Our Featured Sponsors 🎯</h4>
+      </header>
+      <figure class="e-row">
+        <img class="responsive-img" src="https://firebasestorage.googleapis.com/v0/b/earn-and-learn-6172e.appspot.com/o/site%2FlandingPage%2Fvideo_call.svg?alt=media&token=720820a9-83e5-4b7d-a85e-26e5a51eddcb" alt="">
+      </figure>
+      <section class="slider-wrapper-1 e-container">
+          <div class="slider">
+            <div id="logo-slider" class="slide-track">
+              <div class="slide">
+                <img src="https://via.placeholder.com/150" height="100" width="250" alt="" />
+              </div>
+              <div class="slide">
+                <img src="https://via.placeholder.com/150" height="100" width="250" alt="" />
+              </div>
+              <div class="slide">
+                <img src="https://via.placeholder.com/150" height="100" width="250" alt="" />
+              </div>
+            </div>
+          </div>
+      </section>
+    </aside>
+    <aside class="e-col-4 hide" id="sidebar">
+        <header class="e-row">
+          <h4>Check Out Our Featured Sponsors 🎯</h4>
+        </header>
+    </aside>
+  </main>
+  <section id="speakers" class="e-row">
+    <header class="e-container">
+      <h2>Speakers</h2>
+    </header>
+    <ul id="speakerList" class="e-container">
+      <li id="speaker0" class="speaker-card e-col-6">
+          <div class="speaker-card-content">
+            <h3>Nathalie Long</h3>
+            <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/Natalie+Long.jpg"
+            alt="Nathalie Long">
+          </div>
+      </li>
+      <li id="speaker1" class="speaker-card e-col-6">
+        <div class="speaker-card-content overlay">
+          <h3>Nathalie Long</h3>
+          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/Natalie+Long.jpg"
+          alt="Nathalie Long">
+        </div>
+      </li>
+      <li id="speaker0" class="speaker-card e-col-6">
+        <div class="speaker-card-content overlay">
+          <ul class="contactLinks">
+            <li><a href="">Email<span class="material-icons">email</span></a></li>
+            <li><a href="">Web<span class="material-icons">maps_home_work</span></a></li>
+          </ul>
+          <div class="overlay-content">
+            <h3>Nathalie Long</h3>
+          </div>
+          <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/Natalie+Long.jpg"
+          alt="Nathalie Long">
+        </div>
+    </li>
+    <li id="speaker1" class="speaker-card e-col-6">
+      <div class="speaker-card-content overlay">
+        <h3>Nathalie Long</h3>
+        <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/Natalie+Long.jpg"
+        alt="Nathalie Long">
+      </div>
+    </li>
+    <li id="speaker0" class="speaker-card e-col-6">
+      <div class="speaker-card-content">
+        <h3>Nathalie Long</h3>
+        <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/Natalie+Long.jpg"
+        alt="Nathalie Long">
+      </div>
+  </li>
+  <li id="speaker1" class="speaker-card e-col-6">
+    <div class="speaker-card-content overlay">
+      <h3>Nathalie Long</h3>
+      <img src="https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/Natalie+Long.jpg"
+      alt="Nathalie Long">
+    </div>
+  </li>
+    </ul>
+  </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->

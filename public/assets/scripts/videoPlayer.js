@@ -1,3 +1,42 @@
+let speakers = [
+  {
+    name: "Katie Kipp",
+    profilePic: "https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/Katie-Knipp.jpg"
+  },
+  {
+    name: "Edgar Velez",
+    profilePic: "https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/EdgarVelez.JPG"
+  },
+  {
+    name: "Deshari White",
+    profilePic: "https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/DeshariWhite.JPG",
+  },
+  {
+    name: "Darci Johnson",
+    profilePic: "https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/DarciJohnson.jpg",
+  },
+  {
+    name: "Carolina Rizo",
+    profilePic: "https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/Carolina+Rizo.jpg",
+  },
+  {
+    name: "Carmen Perkens",
+    profilePic: "https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/Carmen+Perkins+.jpg",
+  },
+  {
+    name: "Bridgitte Hines",
+    profilePic: "https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/Bridgitte+Hines.jpg",
+  },
+  {
+    name: "",
+    profilePic: "https://earnandlearn.s3.us-west-1.amazonaws.com/videos/speaker-photos/b_(56).jpg",
+  }
+]
+
+
+
+
+
 let videos = {
   group: {
     1: {
@@ -593,8 +632,8 @@ function loadV(lnum) {
   $("#highlights").addClass("hide");
   $("#videoContent").removeClass("hide");
   $("#video").removeClass("hide");
-  $("#video").src =
-    "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/Manufacturing+Week+2020+Contra+Costa+County/2pm_AMBayArea.mp4";
+  $("#sponsors").addClass("hide");
+  $("#sidebar").removeClass("hide");
 }
 // var featuredVideo = document.getElementById("featuredVideo");
 // var featuredVideoTitle = document.getElementById("featuredVideoTitle");
