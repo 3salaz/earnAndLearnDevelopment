@@ -633,7 +633,7 @@ function loadV(lnum) {
   $("#videoContent").removeClass("hide");
   $("#video").removeClass("hide");
   $("#sponsors").addClass("hide");
-  $("#sidebar")
+  $("#sidebar").removeClass("hide");
 }
 // var featuredVideo = document.getElementById("featuredVideo");
 // var featuredVideoTitle = document.getElementById("featuredVideoTitle");

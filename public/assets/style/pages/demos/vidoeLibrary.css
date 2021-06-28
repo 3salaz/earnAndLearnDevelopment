@@ -1484,22 +1484,41 @@ header {
   background-color: #115c75;
 }
 
-#videoWrapper {
+.overlay {
+  position: relative;
+}
+
+.overlay-content {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color ease .7s, color ease .7s;
+  transition: background-color ease .7s, color ease .7s;
+}
+
+#videoWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #FD940A;
   background-image: radial-gradient(circle, #F9A72B 0%, #FA9026 70%, #FB6C1F 100%);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 1em 0;
 }
 
@@ -1551,10 +1570,6 @@ header {
       flex-wrap: wrap;
 }
 
-#flyers .overlay {
-  position: relative;
-}
-
 #flyers .flyer {
   margin: 0em;
   -webkit-box-sizing: border-box;
@@ -1569,16 +1584,39 @@ header {
 
 #flyers .flyer img {
   width: 100%;
+  border-radius: .2em;
+  border: solid white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #flyers .flyer .overlay-content {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background-color: black;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color ease .7s, color ease .7s;
+  transition: background-color ease .7s, color ease .7s;
+}
+
+#flyers .flyer .overlay-content:hover {
+  background-color: rgba(255, 255, 255, 0.822);
+  color: #115c75;
+  font-weight: 500;
+  font-size: 1.2em;
 }
 
 /**/
@@ -1586,13 +1624,17 @@ header {
 /**/
 #sponsors {
   background-color: white;
-  border-radius: .3em;
+  border-radius: 1em;
 }
 
 #sponsors header {
   padding: .2em;
-  text-align: c        nter;
-  background-color: rgba(255, 255, 255, 0);
+  text-align: center;
+  background-color: #115c75;
+  border-radius: 1em 1em 0 0;
+}
+
+#sponsors header h4 {
   color: white;
 }
 
@@ -1688,6 +1730,13 @@ header {
   padding: 0 2em;
 }
 
+/**/
+/**/
+/**/
+#sidebar header h4 {
+  color: white;
+}
+
 @media only screen and (min-width: 33.75em) {
   /* 540px */
 }
@@ -1699,10 +1748,115 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding: 1em 0;
   }
 }
 
 #speakers {
-  background-color: grey;
+  background-color: #115C75;
+  margin: 0;
+}
+
+#speakers header h2 {
+  margin: 0;
+  padding: 1em 0;
+  color: white;
+}
+
+#speakerList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+}
+
+#speakerList .speaker-card {
+  margin: 1em 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#speakerList .speaker-card .speaker-card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 250px;
+  width: 100%;
+  background-color: white;
+  border-radius: .3em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#speakerList .speaker-card .speaker-card-content .contactLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 0;
+  width: 100%;
+}
+
+#speakerList .speaker-card .speaker-card-content .contactLinks li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+}
+
+#speakerList .speaker-card .speaker-card-content .contactLinks li a span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#speakerList .speaker-card .speaker-card-content .overlay-content h3 {
+  color: white;
+  font-weight: 600;
+  font-size: 1.4em;
+  padding: 0 .5em;
+}
+
+#speakerList .speaker-card .speaker-card-content img {
+  height: 100%;
+  border-radius: 0 .3em .3em 0;
 }
 /*# sourceMappingURL=vidoeLibrary.css.map */

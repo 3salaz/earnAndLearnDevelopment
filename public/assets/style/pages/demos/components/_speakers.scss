@@ -1,3 +1,63 @@
 #speakers{
-    background-color: grey;
+    background-color: #115C75;
+    margin: 0;
+    header h2{
+      margin: 0;
+      padding: 1em 0;
+      color: white;
+    }
 }
+#speakerList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0;
+    .speaker-card{
+        margin: 1em 0;
+        box-sizing: border-box;
+        .speaker-card-content{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding:1em;
+            box-sizing: border-box;
+            height: 250px;
+            width: 100%;
+            background-color: white;
+            border-radius: .3em;
+            align-items: center;
+            .contactLinks{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                padding: 0;
+                width: 100%;
+                li a{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-decoration: none;
+                    span{
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+            }
+            .overlay-content{
+                h3{
+                    color: white;
+                    font-weight: 600;
+                    font-size: 1.4em;
+                    padding: 0 .5em;
+                }
+            }
+            img{
+                height: 100%;
+                border-radius: 0 .3em .3em 0;
+            }
+        }
+    }
+}
+  

@@ -1,10 +1,22 @@
-#videoWrapper{
+.overlay{
+    position: relative;
+}
+.overlay-content{
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    color:rgb(255, 255, 255);
     display: flex;
     justify-content: center;
+    align-items: center;
+    transition: background-color ease .7s, color ease .7s;  
+}
+#videoWrapper{
+    display: flex;
+    justify-content: space-evenly;
     flex-direction: column;
     background-color: #FD940A;
     background-image: radial-gradient(circle, #F9A72B 0%, #FA9026 70%, #FB6C1F 100%);
-    align-items: center;
     padding: 1em 0;
     section{
         background-color: rgba(255, 255, 255, 0);
@@ -29,9 +41,7 @@
     justify-content: space-between;
     padding: 0;
     flex-wrap: wrap;
-    .overlay{
-        position: relative;
-    }
+
     .flyer{
         margin: 0em;
         box-sizing: border-box;
@@ -42,15 +52,28 @@
         cursor: pointer;
         img{
             width: 100%;
+            border-radius: .2em;
+            border: solid white;
+            box-sizing: border-box;
         }
         .overlay-content{
             position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background-color: black;
-            color: white;
-            padding-left: 20px;
-            padding-right: 20px;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            color:rgba(255, 255, 255, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color ease .7s, color ease .7s;  
+        }
+        .overlay-content:hover{
+            background-color: rgba(255, 255, 255, 0.822);
+            color:#115c75;
+            font-weight: 500; 
+            font-size: 1.2em; 
         }
         
     }
@@ -58,13 +81,15 @@
 }
 /**//**//**/#sponsors{
     background-color: white;
-    border-radius: .3em;
+    border-radius: 1em;
     header{
         padding: .2em;
-        text-align: c\
-        nter;
-        background-color: rgba(255, 255, 255, 0);
-        color: white;
+        text-align: center;
+        background-color: #115c75;
+        border-radius: 1em 1em 0 0;
+        h4{
+            color: white;
+        }
     }
     figure{
         margin: 0;
@@ -154,11 +179,19 @@
     }
     
 }
-@media only screen and (min-width: 33.75em) {  /* 540px */
+/**//**//**/#sidebar{
+    header{
+        h4{
+            color: white;
+        }
+    }
 }
 
+@media only screen and (min-width: 33.75em) {  /* 540px */
+}
 @media only screen and (min-width: 45em) { /* 720px */
     #videoWrapper{
         flex-direction: row;
+        padding: 1em 0;
     }
 }
