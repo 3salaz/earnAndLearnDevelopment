@@ -5,9 +5,6 @@
   background-color: #FD940A;
   background-image: radial-gradient(circle, #F9A72B 0%, #FA9026 70%, #FB6C1F 100%);
   align-items: center;
-  main{
-
-  }
   aside{
     border-radius: .5em;
     background-color: white;
@@ -28,26 +25,21 @@
       text-align: center;
     }
     .btn{
-      position: relative;
       text-align: center;
       color: white;
       margin: .5em;
       transition: 300s;
       text-align: center;
-      border: .3em solid rgba(49, 42, 42, 0);
+      border: .3em solid rgb(255, 255, 255);
       cursor: pointer;
-      a{
-        text-decoration: none;
-      }
-      .btn:hover{
-        background-color: blue;
-        border: .3em solid white;
-      }
     }
     .overlay-content{
       position: absolute;
       bottom: 8px;
       right: 16px;
+      h4{
+        color: white;
+      }
     }
     #selection{
       width: 100%;
@@ -67,26 +59,36 @@
   }
 }
 #speakers{
-  background-color: rgb(223, 223, 46);
+  background-color: #115C75;
   margin: 0;
   header h2{
     margin: 0;
     padding: 1em 0;
+    color: white;
   }
 }
 #speakerList{
-  max-height: 600px;
-  overflow-y: auto;
-}
-.speaker-card{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  height: 250px;
-  background-color: white;
+  flex-wrap: wrap;
+}
+#sponsors{
+}
+.speaker-card{
   margin: 1em 0;
-  img{
-    height: 100%;
+  box-sizing: border-box;
+  .speaker-card-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 250px;
+    width: 100%;
+    background-color: white;
+    border-radius: .3em;
+    img{
+      height: 100%;
+      border-radius: 0 .3em .3em 0;
+    }
   }
 }
 
@@ -828,6 +830,7 @@ ul{
 }
 .responsive-img{
     width: 100%;
+    text-align: center;
 }
 // 
 .active{
@@ -1129,84 +1132,7 @@ details {
 //     background-color: white;
 // }
 /* Slider */
-.slider-wrapper {
-    -webkit-box-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    padding: 1em;
-}
 
-@-webkit-keyframes scroll {
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-
-    100% {
-        -webkit-transform: translateX(calc(-250px * 7));
-        transform: translateX(calc(-250px * 7));
-    }
-}
-
-@keyframes scroll {
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-
-    100% {
-        -webkit-transform: translateX(calc(-250px * 7));
-        transform: translateX(calc(-250px * 7));
-    }
-}
-
-.slider {
-    background: white;
-    height: 100px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-}
-
-.slider::before,
-.slider::after {
-    background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
-    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-    content: "";
-    height: 100px;
-    position: absolute;
-    width: 200px;
-    z-index: 2;
-}
-
-.slider::after {
-    right: 0;
-    top: 0;
-    -webkit-transform: rotateZ(180deg);
-    transform: rotateZ(180deg);
-}
-
-.slider::before {
-    left: 0;
-    top: 0;
-}
-
-.slider .slide-track {
-    -webkit-animation: scroll 40s linear infinite;
-    animation: scroll 40s linear infinite;
-    display: -webkit-box;
-    display: flex;
-    width: calc(250px * 14);
-}
-
-.slider .slide {
-    height: 100px;
-    width: 250px;
-    padding: 0 2em;
-}
 aside
 
 #gallery {
@@ -1391,3 +1317,7 @@ button.active {
     box-sizing: border-box;
     margin: 0;
 }
+
+@import './components/header';
+@import './components/main';
+@import './components/speakers';
