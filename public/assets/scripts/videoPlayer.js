@@ -37,12 +37,9 @@ let speakers = [
 
 
 
-let videos = {
-  group: {
-    1: {
-
-    },
-    2: {
+const videos = {
+  group: [
+    {
       AMBayArea: {
         "Agenda-Item-Names-CSV": "",
         "Agenda-Timestamps-CSV": "",
@@ -65,75 +62,6 @@ let videos = {
         "Time-Recorded": "",
         "Video-Source":
           "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/Manufacturing+Week+2020+Contra+Costa+County/2pm_AMBayArea.mp4",
-      },
-      AaronLevy: {
-        "Agenda-Item-Names-CSV": "",
-        "Agenda-Timestamps-CSV": "",
-        "Date-Recorded": "2020-10-08T07:00:00.000Z",
-        Description: "",
-        "Event-Series": "Virtual Guest Speakers",
-        Facilitator: "Anna Ramos",
-        "Front-Facing-Video-Name":
-          "Virtual Guest Speaker in Aviation: Aaron Levy",
-        Group: "Group1",
-        "Length-of-Video": "53:01",
-        "Logo-Source": "",
-        Organization: "",
-        "Presentator-Or-Panalist": "Aaron Levy",
-        "Slide-Deck-Name":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/Slide+Decks/AaronLevy.pdf",
-        "Tags-CSV": "guest speakers",
-        "Thumbnail-Link":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/thumbnails/AaroonLevy.png",
-        "Time-Recorded": "1899-12-30T19:42:00.000Z",
-        "Video-Source":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/AaronLevy.mp4",
-      },
-      AlfonsoHooker: {
-        "Agenda-Item-Names-CSV":
-          "Introductions, Career Exploration, Group Norms, Learner Intros, Alfonso's Story, Q&A / AMA, Appreciations",
-        "Agenda-Timestamps-CSV": "3:58, 05:45, 06:33, 09:31, 29:19, 54:22",
-        "Date-Recorded": "2020-09-10T07:00:00.000Z",
-        Description: "",
-        "Event-Series": "Virtual Guest Speakers",
-        Facilitator: "Ariel Kirshenbaum",
-        "Front-Facing-Video-Name":
-          "Virtual Guest Speaker in Technology: Alfonso Hooker",
-        Group: "Group1",
-        "Length-of-Video": "58:24",
-        "Logo-Source": "",
-        Organization: "Tekperfect",
-        "Presentator-Or-Panalist": "Alfonso Hooker",
-        "Slide-Deck-Name": "",
-        "Tags-CSV": "guest speakers, technology",
-        "Thumbnail-Link":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/thumbnails/AlfonsoHooker.png",
-        "Time-Recorded": "1899-12-30T22:46:00.000Z",
-        "Video-Source":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/AlfonsoHooker.mp4",
-      },
-      AngelaLouieHoward: {
-        "Agenda-Item-Names-CSV": "",
-        "Agenda-Timestamps-CSV": "",
-        "Date-Recorded": "2020-11-12",
-        Description: "",
-        "Event-Series": "Virtual Guest Speakers",
-        Facilitator: "Anna Ramos",
-        "Front-Facing-Video-Name":
-          "Virtual Guest Speaker in Community Development: Angela Louie Howard",
-        Group: "Group1",
-        "Length-of-Video": "39:34",
-        "Logo-Source": "",
-        Organization: "",
-        "Presentator-Or-Panalist": "Angela Louie Howard",
-        "Slide-Deck-Name":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/Slide+Decks/AngelaLouieHoward.pdf",
-        "Tags-CSV": "guest speakers, education",
-        "Thumbnail-Link":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/thumbnails/AngelaLouieHoward.png",
-        "Time-Recorded": "1899-12-30T19:44:00.000Z",
-        "Video-Source":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/AngelaLouieHoward.mp4",
       },
       BenchmarkElectronics: {
         "Agenda-Item-Names-CSV": "",
@@ -181,73 +109,26 @@ let videos = {
         "Video-Source":
           "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/Manufacturing+Week+2020+Contra+Costa+County/2m_BishopWisecarver.mp4",
       },
-      BridgettHines: {
-        "Agenda-Item-Names-CSV":
-          "Introductions, Career Exploration, Group Norms, Career Intro, Q&A / AMA, Appreciations",
-        "Agenda-Timestamps-CSV": "01:14, 01:36,03:06,07:01,24:14",
-        "Date-Recorded": "2020-12-09T08:00:00.000Z",
-        Description: "",
-        "Event-Series": "Virtual Guest Speakers",
-        Facilitator: "Anna Ramos",
-        "Front-Facing-Video-Name":
-          "Virtual Guest Speaker in Education: Bridgett Hines",
-        Group: "Group1",
-        "Length-of-Video": "29:50",
-        "Logo-Source": "",
-        Organization: "",
-        "Presentator-Or-Panalist": "Bridgett Hines",
-        "Slide-Deck-Name":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/Slide+Decks/BridgetteHines.pdf",
-        "Tags-CSV": "guest speakers, education",
-        "Thumbnail-Link":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/thumbnails/BridgettHines.png",
-        "Time-Recorded": "1899-12-30T19:42:00.000Z",
-        "Video-Source":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/BridgettHines.mp4",
-      },
-      CarmenPerkins: {
+      GalaxyDessert: {
         "Agenda-Item-Names-CSV": "",
         "Agenda-Timestamps-CSV": "",
         "Date-Recorded": "",
         Description: "",
         "Event-Series": "",
         Facilitator: "",
-        "Front-Facing-Video-Name":
-          "Virtual Guest Speaker in Education Technology: Carmen Perkins",
-        Group: "Group2",
+        "Front-Facing-Video-Name": "Ask Me Anything With Galaxy Desserts CEO",
+        Group: "Manufacturing",
         "Length-of-Video": "",
         "Logo-Source": "",
         Organization: "",
         "Presentator-Or-Panalist": "",
         "Slide-Deck-Name": "",
-        "Tags-CSV": "guest speakers, technology, education",
+        "Tags-CSV": "manufacturing week",
         "Thumbnail-Link":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/thumbnails/CarmenPerkins.png",
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/Thumbnails/manufacuring-week-2020.png",
         "Time-Recorded": "",
         "Video-Source":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/CarmenPerkins.mp4",
-      },
-      CarolinaGarciaRizo: {
-        "Agenda-Item-Names-CSV": "",
-        "Agenda-Timestamps-CSV": "",
-        "Date-Recorded": "",
-        Description: "",
-        "Event-Series": "",
-        Facilitator: "",
-        "Front-Facing-Video-Name":
-          "Virtual Guest Speaker in Science: Carolina Garcia Rizo PhD.",
-        Group: "Group2",
-        "Length-of-Video": "",
-        "Logo-Source": "",
-        Organization: "",
-        "Presentator-Or-Panalist": "",
-        "Slide-Deck-Name": "",
-        "Tags-CSV": "guest speakers, health",
-        "Thumbnail-Link":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/Thumbnails/CarolinaGarciaRizo.png",
-        "Time-Recorded": "",
-        "Video-Source":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/CarolinaGarciaRizo.mp4",
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/Manufacturing+Week+2020+Contra+Costa+County/12am_GalaxyDessert.mp4",
       },
       CertificatAndDegreePathways: {
         "Agenda-Item-Names-CSV": "",
@@ -359,49 +240,6 @@ let videos = {
         "Video-Source":
           "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/Manufacturing+Week+2020+Contra+Costa+County/12am_DegreeProgram.mp4",
       },
-      DeshariWhite: {
-        "Agenda-Item-Names-CSV": "",
-        "Agenda-Timestamps-CSV": "",
-        "Date-Recorded": "",
-        Description: "",
-        "Event-Series": "",
-        Facilitator: "",
-        "Front-Facing-Video-Name":
-          "Virtual Guest Speaker in Safety: Deshari White",
-        Group: "Group2",
-        "Length-of-Video": "",
-        "Logo-Source": "",
-        Organization: "",
-        "Presentator-Or-Panalist": "",
-        "Slide-Deck-Name": "",
-        "Tags-CSV": "guest speakers",
-        "Thumbnail-Link":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/thumbnails/DeshariWhite.png",
-        "Time-Recorded": "",
-        "Video-Source":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/DeshariWhite.mp4",
-      },
-      EdgarVelez: {
-        "Agenda-Item-Names-CSV": "",
-        "Agenda-Timestamps-CSV": "",
-        "Date-Recorded": "",
-        Description: "",
-        "Event-Series": "",
-        Facilitator: "",
-        "Front-Facing-Video-Name": "Virtual Guest Speaker in Data: Edgar Velez",
-        Group: "Group2",
-        "Length-of-Video": "",
-        "Logo-Source": "",
-        Organization: "",
-        "Presentator-Or-Panalist": "",
-        "Slide-Deck-Name": "",
-        "Tags-CSV": "guest speakers, technology",
-        "Thumbnail-Link":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/Thumbnails/EdgarVelez.png",
-        "Time-Recorded": "",
-        "Video-Source":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/EdgarVelez.mp4",
-      },
       Fresenius: {
         "Agenda-Item-Names-CSV": "",
         "Agenda-Timestamps-CSV": "",
@@ -423,73 +261,6 @@ let videos = {
         "Time-Recorded": "",
         "Video-Source":
           "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/Manufacturing+Week+2020+Contra+Costa+County/10am_Fresenius.mp4",
-      },
-      GalaxyDessert: {
-        "Agenda-Item-Names-CSV": "",
-        "Agenda-Timestamps-CSV": "",
-        "Date-Recorded": "",
-        Description: "",
-        "Event-Series": "",
-        Facilitator: "",
-        "Front-Facing-Video-Name": "Ask Me Anything With Galaxy Desserts CEO",
-        Group: "Manufacturing",
-        "Length-of-Video": "",
-        "Logo-Source": "",
-        Organization: "",
-        "Presentator-Or-Panalist": "",
-        "Slide-Deck-Name": "",
-        "Tags-CSV": "manufacturing week",
-        "Thumbnail-Link":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/Thumbnails/manufacuring-week-2020.png",
-        "Time-Recorded": "",
-        "Video-Source":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/Manufacturing+Week+2020+Contra+Costa+County/12am_GalaxyDessert.mp4",
-      },
-      JoelAbelson: {
-        "Agenda-Item-Names-CSV":
-          "Introductions, Career Exploration, Schedule, Group Norms, Learner Intros, Guest Stories: Joel, Q&A / AMA, Appreciations",
-        "Agenda-Timestamps-CSV":
-          "00:00:12, 00:02:44, 00:03:50, 00:04:20, 00:05:45, 00:07:06, 00:20:34, 00:51:30",
-        "Date-Recorded": "2020-09-10T07:00:00.000Z",
-        Description: "",
-        "Event-Series": "Virtual Guest Speakers",
-        Facilitator: "Ariel Kirshenbaum",
-        "Front-Facing-Video-Name":
-          "Virtual Guest Speaker in Fire Science: Joel Abelson",
-        Group: "Group1",
-        "Length-of-Video": "55:30",
-        "Logo-Source": "",
-        Organization: "",
-        "Presentator-Or-Panalist": "Joel Abelson",
-        "Slide-Deck-Name": "",
-        "Tags-CSV": "guest speakers",
-        "Thumbnail-Link":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/thumbnails/JoelAbelson.png",
-        "Time-Recorded": "1899-12-30T19:42:00.000Z",
-        "Video-Source":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/JoelAbelson.mp4",
-      },
-      KatieKnipp: {
-        "Agenda-Item-Names-CSV": "",
-        "Agenda-Timestamps-CSV": "",
-        "Date-Recorded": "",
-        Description: "",
-        "Event-Series": "",
-        Facilitator: "",
-        "Front-Facing-Video-Name":
-          "Virtual Guest Speaker in Music: Katie Knipp",
-        Group: "Group2",
-        "Length-of-Video": "",
-        "Logo-Source": "",
-        Organization: "",
-        "Presentator-Or-Panalist": "",
-        "Slide-Deck-Name": "",
-        "Tags-CSV": "guest speakers",
-        "Thumbnail-Link":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/thumbnails/KatieKnipp.png",
-        "Time-Recorded": "",
-        "Video-Source":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/KatieKnipp.mp4",
       },
       MadeinPittsburgPanel: {
         "Agenda-Item-Names-CSV": "",
@@ -536,27 +307,6 @@ let videos = {
         "Video-Source":
           "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/Manufacturing+Week+2020+Contra+Costa+County/2pm_MarinezFacilityTour.mp4",
       },
-      NatalieLong: {
-        "Agenda-Item-Names-CSV": "",
-        "Agenda-Timestamps-CSV": "",
-        "Date-Recorded": "",
-        Description: "",
-        "Event-Series": "",
-        Facilitator: "",
-        "Front-Facing-Video-Name":
-          "Virtual Guest Speaker in Product Development: Natalie Long",
-        Group: "Group2",
-        "Length-of-Video": "",
-        "Logo-Source": "",
-        Organization: "",
-        "Presentator-Or-Panalist": "",
-        "Slide-Deck-Name": "",
-        "Tags-CSV": "guest speakers",
-        "Thumbnail-Link": "",
-        "Time-Recorded": "",
-        "Video-Source":
-          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/NatalieLong.mp4",
-      },
       PWB: {
         "Agenda-Item-Names-CSV": "",
         "Agenda-Timestamps-CSV": "",
@@ -602,6 +352,255 @@ let videos = {
         "Video-Source":
           "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/Manufacturing+Week+2020+Contra+Costa+County/12pm_RamarFood.mp4",
       },
+    },
+    {
+      JoelAbelson: {
+        "Agenda-Item-Names-CSV":
+          "Introductions, Career Exploration, Schedule, Group Norms, Learner Intros, Guest Stories: Joel, Q&A / AMA, Appreciations",
+        "Agenda-Timestamps-CSV":
+          "00:00:12, 00:02:44, 00:03:50, 00:04:20, 00:05:45, 00:07:06, 00:20:34, 00:51:30",
+        "Date-Recorded": "2020-09-10T07:00:00.000Z",
+        Description: "",
+        "Event-Series": "Virtual Guest Speakers",
+        Facilitator: "Ariel Kirshenbaum",
+        "Front-Facing-Video-Name":
+          "Virtual Guest Speaker in Fire Science: Joel Abelson",
+        Group: "Group1",
+        "Length-of-Video": "55:30",
+        "Logo-Source": "",
+        Organization: "",
+        "Presentator-Or-Panalist": "Joel Abelson",
+        "Slide-Deck-Name": "",
+        "Tags-CSV": "guest speakers",
+        "Thumbnail-Link":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/thumbnails/JoelAbelson.png",
+        "Time-Recorded": "1899-12-30T19:42:00.000Z",
+        "Video-Source":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/JoelAbelson.mp4",
+      },
+      KatieKnipp: {
+        "Agenda-Item-Names-CSV": "",
+        "Agenda-Timestamps-CSV": "",
+        "Date-Recorded": "",
+        Description: "",
+        "Event-Series": "",
+        Facilitator: "",
+        "Front-Facing-Video-Name":
+          "Virtual Guest Speaker in Music: Katie Knipp",
+        Group: "Group2",
+        "Length-of-Video": "",
+        "Logo-Source": "",
+        Organization: "",
+        "Presentator-Or-Panalist": "",
+        "Slide-Deck-Name": "",
+        "Tags-CSV": "guest speakers",
+        "Thumbnail-Link":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/thumbnails/KatieKnipp.png",
+        "Time-Recorded": "",
+        "Video-Source":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/KatieKnipp.mp4",
+      },
+      AaronLevy: {
+        "Agenda-Item-Names-CSV": "",
+        "Agenda-Timestamps-CSV": "",
+        "Date-Recorded": "2020-10-08T07:00:00.000Z",
+        Description: "",
+        "Event-Series": "Virtual Guest Speakers",
+        Facilitator: "Anna Ramos",
+        "Front-Facing-Video-Name":
+          "Virtual Guest Speaker in Aviation: Aaron Levy",
+        Group: "Group1",
+        "Length-of-Video": "53:01",
+        "Logo-Source": "",
+        Organization: "",
+        "Presentator-Or-Panalist": "Aaron Levy",
+        "Slide-Deck-Name":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/Slide+Decks/AaronLevy.pdf",
+        "Tags-CSV": "guest speakers",
+        "Thumbnail-Link":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/thumbnails/AaroonLevy.png",
+        "Time-Recorded": "1899-12-30T19:42:00.000Z",
+        "Video-Source":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/AaronLevy.mp4",
+      },
+      AlfonsoHooker: {
+        "Agenda-Item-Names-CSV":
+          "Introductions, Career Exploration, Group Norms, Learner Intros, Alfonso's Story, Q&A / AMA, Appreciations",
+        "Agenda-Timestamps-CSV": "3:58, 05:45, 06:33, 09:31, 29:19, 54:22",
+        "Date-Recorded": "2020-09-10T07:00:00.000Z",
+        Description: "",
+        "Event-Series": "Virtual Guest Speakers",
+        Facilitator: "Ariel Kirshenbaum",
+        "Front-Facing-Video-Name":
+          "Virtual Guest Speaker in Technology: Alfonso Hooker",
+        Group: "Group1",
+        "Length-of-Video": "58:24",
+        "Logo-Source": "",
+        Organization: "Tekperfect",
+        "Presentator-Or-Panalist": "Alfonso Hooker",
+        "Slide-Deck-Name": "",
+        "Tags-CSV": "guest speakers, technology",
+        "Thumbnail-Link":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/thumbnails/AlfonsoHooker.png",
+        "Time-Recorded": "1899-12-30T22:46:00.000Z",
+        "Video-Source":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/AlfonsoHooker.mp4",
+      },
+      AngelaLouieHoward: {
+        "Agenda-Item-Names-CSV": "",
+        "Agenda-Timestamps-CSV": "",
+        "Date-Recorded": "2020-11-12",
+        Description: "",
+        "Event-Series": "Virtual Guest Speakers",
+        Facilitator: "Anna Ramos",
+        "Front-Facing-Video-Name":
+          "Virtual Guest Speaker in Community Development: Angela Louie Howard",
+        Group: "Group1",
+        "Length-of-Video": "39:34",
+        "Logo-Source": "",
+        Organization: "",
+        "Presentator-Or-Panalist": "Angela Louie Howard",
+        "Slide-Deck-Name":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/Slide+Decks/AngelaLouieHoward.pdf",
+        "Tags-CSV": "guest speakers, education",
+        "Thumbnail-Link":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/thumbnails/AngelaLouieHoward.png",
+        "Time-Recorded": "1899-12-30T19:44:00.000Z",
+        "Video-Source":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/AngelaLouieHoward.mp4",
+      },
+      BridgettHines: {
+        "Agenda-Item-Names-CSV":
+          "Introductions, Career Exploration, Group Norms, Career Intro, Q&A / AMA, Appreciations",
+        "Agenda-Timestamps-CSV": "01:14, 01:36,03:06,07:01,24:14",
+        "Date-Recorded": "2020-12-09T08:00:00.000Z",
+        Description: "",
+        "Event-Series": "Virtual Guest Speakers",
+        Facilitator: "Anna Ramos",
+        "Front-Facing-Video-Name":
+          "Virtual Guest Speaker in Education: Bridgett Hines",
+        Group: "Group1",
+        "Length-of-Video": "29:50",
+        "Logo-Source": "",
+        Organization: "",
+        "Presentator-Or-Panalist": "Bridgett Hines",
+        "Slide-Deck-Name":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/Slide+Decks/BridgetteHines.pdf",
+        "Tags-CSV": "guest speakers, education",
+        "Thumbnail-Link":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/thumbnails/BridgettHines.png",
+        "Time-Recorded": "1899-12-30T19:42:00.000Z",
+        "Video-Source":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/BridgettHines.mp4",
+      },
+      CarmenPerkins: {
+        "Agenda-Item-Names-CSV": "",
+        "Agenda-Timestamps-CSV": "",
+        "Date-Recorded": "",
+        Description: "",
+        "Event-Series": "",
+        Facilitator: "",
+        "Front-Facing-Video-Name":
+          "Virtual Guest Speaker in Education Technology: Carmen Perkins",
+        Group: "Group2",
+        "Length-of-Video": "",
+        "Logo-Source": "",
+        Organization: "",
+        "Presentator-Or-Panalist": "",
+        "Slide-Deck-Name": "",
+        "Tags-CSV": "guest speakers, technology, education",
+        "Thumbnail-Link":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/thumbnails/CarmenPerkins.png",
+        "Time-Recorded": "",
+        "Video-Source":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/CarmenPerkins.mp4",
+      },
+      CarolinaGarciaRizo: {
+        "Agenda-Item-Names-CSV": "",
+        "Agenda-Timestamps-CSV": "",
+        "Date-Recorded": "",
+        Description: "",
+        "Event-Series": "",
+        Facilitator: "",
+        "Front-Facing-Video-Name":
+          "Virtual Guest Speaker in Science: Carolina Garcia Rizo PhD.",
+        Group: "Group2",
+        "Length-of-Video": "",
+        "Logo-Source": "",
+        Organization: "",
+        "Presentator-Or-Panalist": "",
+        "Slide-Deck-Name": "",
+        "Tags-CSV": "guest speakers, health",
+        "Thumbnail-Link":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/Thumbnails/CarolinaGarciaRizo.png",
+        "Time-Recorded": "",
+        "Video-Source":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/CarolinaGarciaRizo.mp4",
+      },
+      DeshariWhite: {
+        "Agenda-Item-Names-CSV": "",
+        "Agenda-Timestamps-CSV": "",
+        "Date-Recorded": "",
+        Description: "",
+        "Event-Series": "",
+        Facilitator: "",
+        "Front-Facing-Video-Name":
+          "Virtual Guest Speaker in Safety: Deshari White",
+        Group: "Group2",
+        "Length-of-Video": "",
+        "Logo-Source": "",
+        Organization: "",
+        "Presentator-Or-Panalist": "",
+        "Slide-Deck-Name": "",
+        "Tags-CSV": "guest speakers",
+        "Thumbnail-Link":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/thumbnails/DeshariWhite.png",
+        "Time-Recorded": "",
+        "Video-Source":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/DeshariWhite.mp4",
+      },
+      EdgarVelez: {
+        "Agenda-Item-Names-CSV": "",
+        "Agenda-Timestamps-CSV": "",
+        "Date-Recorded": "",
+        Description: "",
+        "Event-Series": "",
+        Facilitator: "",
+        "Front-Facing-Video-Name": "Virtual Guest Speaker in Data: Edgar Velez",
+        Group: "Group2",
+        "Length-of-Video": "",
+        "Logo-Source": "",
+        Organization: "",
+        "Presentator-Or-Panalist": "",
+        "Slide-Deck-Name": "",
+        "Tags-CSV": "guest speakers, technology",
+        "Thumbnail-Link":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/Thumbnails/EdgarVelez.png",
+        "Time-Recorded": "",
+        "Video-Source":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/EdgarVelez.mp4",
+      },
+      NatalieLong: {
+        "Agenda-Item-Names-CSV": "",
+        "Agenda-Timestamps-CSV": "",
+        "Date-Recorded": "",
+        Description: "",
+        "Event-Series": "",
+        Facilitator: "",
+        "Front-Facing-Video-Name":
+          "Virtual Guest Speaker in Product Development: Natalie Long",
+        Group: "Group2",
+        "Length-of-Video": "",
+        "Logo-Source": "",
+        Organization: "",
+        "Presentator-Or-Panalist": "",
+        "Slide-Deck-Name": "",
+        "Tags-CSV": "guest speakers",
+        "Thumbnail-Link": "",
+        "Time-Recorded": "",
+        "Video-Source":
+          "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/NatalieLong.mp4",
+      },
       YasmineCampos: {
         "Agenda-Item-Names-CSV": "",
         "Agenda-Timestamps-CSV": "",
@@ -623,17 +622,24 @@ let videos = {
         "Time-Recorded": "",
         "Video-Source":
           "https://earnandlearn.s3-us-west-1.amazonaws.com/videos/group1/videos/YasmineCampos.mp4",
-      },
-    },
-  }
+      }
+    }
+  ]
 };
+let groupVideos = [];
+let video = document.getElementById("video");
+console.log(videos.group.length);
 
 function loadV(lnum) {
+  let videos = [];
+  video.push();
   $("#highlights").addClass("hide");
   $("#videoContent").removeClass("hide");
   $("#video").removeClass("hide");
+  // video.src = videos.group
   $("#sponsors").addClass("hide");
   $("#sidebar").removeClass("hide");
+  console.log(videos.group[lnum]["AMBayArea"]);
 }
 // var featuredVideo = document.getElementById("featuredVideo");
 // var featuredVideoTitle = document.getElementById("featuredVideoTitle");

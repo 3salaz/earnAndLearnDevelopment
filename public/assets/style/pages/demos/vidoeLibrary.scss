@@ -58,40 +58,6 @@
     padding: 1em;
   }
 }
-#speakers{
-  background-color: #115C75;
-  margin: 0;
-  header h2{
-    margin: 0;
-    padding: 1em 0;
-    color: white;
-  }
-}
-#speakerList{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-#sponsors{
-}
-.speaker-card{
-  margin: 1em 0;
-  box-sizing: border-box;
-  .speaker-card-content{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 250px;
-    width: 100%;
-    background-color: white;
-    border-radius: .3em;
-    img{
-      height: 100%;
-      border-radius: 0 .3em .3em 0;
-    }
-  }
-}
-
 .slider-wrapper-1 {
   -webkit-box-align: center;
   -ms-flex-align: center;
