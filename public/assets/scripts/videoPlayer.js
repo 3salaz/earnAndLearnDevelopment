@@ -33,10 +33,6 @@ let speakers = [
   }
 ]
 
-
-
-
-
 const videos = {
   group: [
     {
